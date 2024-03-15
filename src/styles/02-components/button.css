@@ -1,0 +1,22 @@
+.button {
+  @apply bg-white text-primary;
+  @apply text-[2rem] uppercase tracking-[2px] font-serif;
+  @apply w-[274px] h-[274px];
+  @apply rounded-full;
+  @apply relative;
+
+  &::before {
+    content: "";
+    @apply absolute w-[420px] h-[420px];
+    @apply top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2;
+    @apply bg-white/10;
+    @apply rounded-full;
+    @apply z-[-1];
+    @apply transition;
+    @apply scale-0;
+  }
+
+  &:hover::before {
+    @apply scale-100;
+  }
+}

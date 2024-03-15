@@ -1,0 +1,11 @@
+/* BASE */
+@import "./tailwind/base.css";
+@import "./01-base/theme.css";
+@import "./01-base/heading.css";
+
+/* COMPONENTS */
+@import "./tailwind/components.css";
+@import "./02-components/button.css";
+
+/* UTILITIES */
+@import "./tailwind/utilities.css";
