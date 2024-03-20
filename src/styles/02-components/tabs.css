@@ -1,0 +1,17 @@
+.tabs {
+  @apply flex items-center gap-8;
+
+  .tab {
+    @apply uppercase border-b-2 border-transparent;
+    @apply text-secondary;
+    @apply transition-colors;
+
+    &:hover {
+      @apply border-white/40;
+    }
+  }
+
+  .tab-active {
+    @apply border-white;
+  }
+}

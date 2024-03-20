@@ -1,0 +1,56 @@
+@if (currentDestination) {
+<div class="container">
+  <h2 class="font-sans text-2xl">
+    <span class="text-white/20 mr-6">01</span> Pick your destination
+  </h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 items-end mt-24">
+    <img
+      [src]="currentDestination.images.webp"
+      [alt]="currentDestination.name"
+      class="w-[445px] h-[445px] object-cover"
+    />
+
+    <div class="max-w-[445px]">
+      <nav class="tabs">
+        @for (destination of destinations; track $index) {
+        <a
+          class="tab"
+          [ngClass]="{
+            'tab-active': destination.name.toLowerCase() === destinationName
+          }"
+          [routerLink]="['/destinations', destination.name.toLowerCase()]"
+        >
+          {{ destination.name }}
+        </a>
+        }
+      </nav>
+
+      <h1 class="text-8xl mt-12">{{ currentDestination.name }}</h1>
+
+      <p class="mt-8 text-secondary text-lg">
+        {{ currentDestination.description }}
+      </p>
+
+      <div
+        class="flex items-center gap-24 mt-16 pt-8 border-t border-secondary/10"
+      >
+        <div>
+          <h3 class="text-sm text-secondary">Avg. Distance</h3>
+          <p class="text-4xl font-serif uppercase mt-4">
+            {{ currentDestination.distance }}
+          </p>
+        </div>
+        <div>
+          <h3 class="text-sm text-secondary">Est. Travel Time</h3>
+          <p class="text-4xl font-serif uppercase mt-4">
+            {{ currentDestination.travel }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+} @else {
+<p>No se encontró la destinación</p>
+}

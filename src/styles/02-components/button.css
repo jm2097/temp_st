@@ -12,7 +12,7 @@
     @apply bg-white/10;
     @apply rounded-full;
     @apply z-[-1];
-    @apply transition;
+    @apply transition duration-700 ease-out;
     @apply scale-0;
   }
 

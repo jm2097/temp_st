@@ -6,6 +6,7 @@
 /* COMPONENTS */
 @import "./tailwind/components.css";
 @import "./02-components/button.css";
+@import "./02-components/tabs.css";
 
 /* UTILITIES */
 @import "./tailwind/utilities.css";
